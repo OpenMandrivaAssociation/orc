@@ -1,5 +1,5 @@
 %define name orc
-%define version 0.4.3
+%define version 0.4.4
 %define release %mkrel 1
 
 %define api 0.4
@@ -12,7 +12,6 @@ Name: %{name}
 Version: %{version}
 Release: %{release}
 Source0: http://code.entropywave.com/download/orc/%{name}-%{version}.tar.gz
-Patch0: orc-0.4.3-fix-linking.patch
 License: BSD
 Group: Development/Other
 Url: http://code.entropywave.com/projects/orc/
@@ -53,7 +52,6 @@ subtraction, and many arithmetic operations.
 %prep
 %setup -q
 %apply_patches
-autoreconf
 
 %build
 %configure2_5x
