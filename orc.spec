@@ -1,5 +1,5 @@
 %define name orc
-%define version 0.4.9
+%define version 0.4.10
 %define release %mkrel 1
 
 %define api 0.4
@@ -69,7 +69,6 @@ rm -rf %{buildroot}
 %doc README TODO
 %_bindir/orcc
 %_bindir/orc-bugreport
-%_libexecdir/%name
 
 %files -n %libname
 %defattr(-,root,root)
