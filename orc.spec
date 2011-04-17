@@ -1,5 +1,5 @@
 %define name orc
-%define version 0.4.11
+%define version 0.4.12
 %define release %mkrel 1
 
 %define api 0.4
