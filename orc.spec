@@ -1,5 +1,5 @@
 %define name orc
-%define version 0.4.14
+%define version 0.4.16
 %define release %mkrel 1
 
 %define api 0.4
@@ -82,4 +82,4 @@ rm -rf %{buildroot}
 %_libdir/liborc*-%api.so
 %_libdir/pkgconfig/orc-%api.pc
 %_datadir/gtk-doc/html/orc
-
+%_datadir/aclocal/orc.m4
