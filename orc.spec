@@ -5,8 +5,8 @@
 
 Summary:	The Oil Runtime Compiler
 Name:		orc
-Version:	0.4.16
-Release:	2
+Version:	0.4.17
+Release:	1
 Source0:	http://code.entropywave.com/download/orc/%{name}-%{version}.tar.gz
 License:	BSD
 Group:		Development/Other
@@ -131,5 +131,6 @@ subtraction, and many arithmetic operations.
 * Wed Mar 10 2010 Götz Waschk <waschk@mandriva.org> 0.4.3-1mdv2010.1
 + Revision: 517309
 - import orc
+
 
 
