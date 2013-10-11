@@ -6,8 +6,8 @@
 
 Summary:	The Oil Runtime Compiler
 Name:		orc
-Version:	0.4.17
-Release:	2
+Version:	0.4.18
+Release:	1
 License:	BSD
 Group:		Development/Other
 Url:		http://code.entropywave.com/projects/orc/
@@ -30,7 +30,7 @@ This package contains a shared library for %{name}.
 %package -n %{libtest}
 Summary:	The Oil Runtime Compiler
 Group:		System/Libraries
-Conflicts:	%{_lib}orc0.4_0 < 0.4.17-2
+Conflicts:	%{_lib}orc0.4_0 <= 0.4.17-2
 
 %description -n %{libtest}
 This package contains a shared library for %{name}.

@@ -1,4 +1,5 @@
 removed_sources:
   orc-0.4.16.tar.gz: b67131881e7834b0c820bfba468f668100fb2e91
-sources:
   orc-0.4.17.tar.gz: 5cb7b3225a23bc4a5771a62e9c94a90d21609632
+sources:
+  orc-0.4.18.tar.gz: 0119bec2291c878a7953cb041dd080856c986ccf
