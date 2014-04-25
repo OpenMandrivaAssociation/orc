@@ -5,13 +5,14 @@
 %define devname %mklibname -d %{name}
 
 Summary:	The Oil Runtime Compiler
+
 Name:		orc
-Version:	0.4.18
-Release:	5
+Version:	0.4.19
+Release:	1
 License:	BSD
 Group:		Development/Other
 Url:		http://code.entropywave.com/projects/orc/
-Source0:	http://code.entropywave.com/download/orc/%{name}-%{version}.tar.gz
+Source0:	http://gstreamer.freedesktop.org/src/orc/%{name}-%{version}.tar.gz
 
 %description
 Orc is a library and set of tools for compiling and executing very
@@ -22,6 +23,7 @@ subtraction, and many arithmetic operations.
 
 %package -n %{libname}
 Summary:	The Oil Runtime Compiler
+
 Group:		System/Libraries
 
 %description -n %{libname}
@@ -29,6 +31,7 @@ This package contains a shared library for %{name}.
 
 %package -n %{libtest}
 Summary:	The Oil Runtime Compiler
+
 Group:		System/Libraries
 Conflicts:	%{_lib}orc0.4_0 <= 0.4.17-2
 
@@ -37,6 +40,7 @@ This package contains a shared library for %{name}.
 
 %package -n %{devname}
 Summary:	The Oil Runtime Compiler
+
 Group:		Development/C
 Requires:	%{libname} = %{version}-%{release}
 Requires:	%{libtest} = %{version}-%{release}
@@ -73,4 +77,5 @@ This package includes the development files for %{name}.
 %{_libdir}/pkgconfig/orc-%{api}.pc
 %{_datadir}/gtk-doc/html/orc
 %{_datadir}/aclocal/orc.m4
+
 
