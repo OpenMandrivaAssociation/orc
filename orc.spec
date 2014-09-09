@@ -7,12 +7,12 @@
 Summary:	The Oil Runtime Compiler
 
 Name:		orc
-Version:	0.4.19
-Release:	3
+Version:	0.4.22
+Release:	1
 License:	BSD
 Group:		Development/Other
 Url:		http://code.entropywave.com/projects/orc/
-Source0:	http://gstreamer.freedesktop.org/src/orc/%{name}-%{version}.tar.gz
+Source0:	http://gstreamer.freedesktop.org/src/orc/%{name}-%{version}.tar.xz
 
 %description
 Orc is a library and set of tools for compiling and executing very
@@ -77,5 +77,3 @@ This package includes the development files for %{name}.
 %{_libdir}/pkgconfig/orc-%{api}.pc
 %{_datadir}/gtk-doc/html/orc
 %{_datadir}/aclocal/orc.m4
-
-
