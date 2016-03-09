@@ -1,9 +1,2 @@
-removed_sources:
-  orc-0.4.16.tar.gz: b67131881e7834b0c820bfba468f668100fb2e91
-  orc-0.4.17.tar.gz: 5cb7b3225a23bc4a5771a62e9c94a90d21609632
-  orc-0.4.18.tar.gz: 0119bec2291c878a7953cb041dd080856c986ccf
-  orc-0.4.19.tar.gz: 6186a6a5faefe6b61d55e5406c7365d69b91c982
-  orc-0.4.22.tar.xz: c50cf2f2a9a7e4ab400fd79f706e831ace1936bc
-  orc-0.4.23.tar.xz: 17283a871cc4bda968dc4d1e8022c6fbf8672d4b
 sources:
-  orc-0.4.24.tar.xz: f5d447398b757170e7508bc30d344ca2e9ada155
+  orc-0.4.25.tar.xz: 1cc2205e91d283519109b2c851ddf98a4f60f9e9
