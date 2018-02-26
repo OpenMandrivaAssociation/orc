@@ -7,7 +7,7 @@
 Summary:	The Oil Runtime Compiler
 
 Name:		orc
-Version:	0.4.25
+Version:	0.4.28
 Release:	1
 License:	BSD
 Group:		Development/Other
