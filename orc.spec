@@ -7,8 +7,8 @@
 Summary:	The Oil Runtime Compiler
 
 Name:		orc
-Version:	0.4.28
-Release:	4
+Version:	0.4.29
+Release:	1
 License:	BSD
 Group:		Development/Other
 Url:		http://code.entropywave.com/projects/orc/
@@ -55,10 +55,10 @@ This package includes the development files for %{name}.
 
 %build
 %configure2_5x --disable-static
-%make
+%make_build
 
 %install
-%makeinstall_std
+%make_install
 
 %files
 %doc README TODO
@@ -75,5 +75,6 @@ This package includes the development files for %{name}.
 %{_includedir}/%{name}-%{api}/
 %{_libdir}/liborc*-%{api}.so
 %{_libdir}/pkgconfig/orc-%{api}.pc
+%{_libdir}/pkgconfig/orc-test-%{api}.pc
 %{_datadir}/gtk-doc/html/orc
 %{_datadir}/aclocal/orc.m4
