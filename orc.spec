@@ -54,7 +54,8 @@ This package includes the development files for %{name}.
 %setup -q
 
 %build
-%configure2_5x --disable-static
+export LDFLAGS="%{ldflags}"
+%configure --disable-static
 %make_build
 
 %install
