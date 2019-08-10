@@ -3,6 +3,7 @@
 %define libname %mklibname %{name} %{api} %{major}
 %define libtest %mklibname %{name}-test %{api} %{major}
 %define devname %mklibname -d %{name}
+%define devstatic %mklibname -d -s %{name}
 
 Summary:	The Oil Runtime Compiler
 
@@ -13,6 +14,7 @@ License:	BSD
 Group:		Development/Other
 Url:		http://code.entropywave.com/projects/orc/
 Source0:	http://gstreamer.freedesktop.org/src/orc/%{name}-%{version}.tar.xz
+BuildRequires:	meson
 
 %description
 Orc is a library and set of tools for compiling and executing very
@@ -50,16 +52,25 @@ Provides:	%{name}-devel = %{version}-%{release}
 %description -n %{devname}
 This package includes the development files for %{name}.
 
+%package -n %{devstatic}
+Summary:	The Oil Runtime Compiler
+Group:		Development/C
+Requires:	%{devname} = %{version}-%{release}
+Provides:	%{name}-static-devel = %{version}-%{release}
+
+%description -n %{devstatic}
+This package includes the development files for %{name}.
+
 %prep
 %setup -q
 
 %build
 export LDFLAGS="%{ldflags}"
-%configure --disable-static
-%make_build
+%meson -Dgtk_doc=disabled
+%meson_build
 
 %install
-%make_install
+%meson_install
 
 %files
 %doc README TODO
@@ -77,5 +88,7 @@ export LDFLAGS="%{ldflags}"
 %{_libdir}/liborc*-%{api}.so
 %{_libdir}/pkgconfig/orc-%{api}.pc
 %{_libdir}/pkgconfig/orc-test-%{api}.pc
-%{_datadir}/gtk-doc/html/orc
 %{_datadir}/aclocal/orc.m4
+
+%files -n %{devstatic}
+%{_libdir}/liborc*-%{api}.a
