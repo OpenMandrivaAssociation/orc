@@ -20,7 +20,7 @@ Version:	0.4.33
 Release:	2
 License:	BSD
 Group:		Development/Other
-Url:		http://code.entropywave.com/projects/orc/
+Url:		https://code.entropywave.com/projects/orc/
 Source0:	http://gstreamer.freedesktop.org/src/orc/%{name}-%{version}.tar.xz
 BuildRequires:	meson
 
