@@ -16,8 +16,8 @@
 
 Summary:	The Oil Runtime Compiler
 Name:		orc
-Version:	0.4.33
-Release:	2
+Version:	0.4.42
+Release:	1
 License:	BSD
 Group:		Development/Other
 Url:		https://code.entropywave.com/projects/orc/
@@ -55,6 +55,8 @@ Requires:	%{libtest} = %{version}-%{release}
 Requires:	%{name} >= %{version}-%{release}
 Provides:	%{name}-devel = %{version}-%{release}
 
+Obsoletes:	%{devstatic} < %{EVRD}
+
 %description -n %{devname}
 This package includes the development files for %{name}.
 
@@ -88,6 +90,7 @@ Group:		Development/C
 Requires:	%{devname} = %{version}-%{release}
 Requires:	%{lib32name} = %{version}-%{release}
 Requires:	%{lib32test} = %{version}-%{release}
+Obsoletes:	%{dev32static} < %{EVRD}
 
 %description -n %{dev32name}
 This package includes the development files for %{name}.
@@ -106,11 +109,11 @@ This package includes the development files for %{name}.
 
 %if %{with compat32}
 export LDFLAGS="%(echo %{ldflags} |sed -e 's,-m64,,g;s,-mx32,,g') -m32"
-%meson32 -Dgtk_doc=disabled
+%meson32 -Dhotdoc=disabled
 %endif
 
 export LDFLAGS="%{ldflags}"
-%meson -Dgtk_doc=disabled
+%meson -Dhotdoc=disabled
 
 %build
 %if %{with compat32}
@@ -125,7 +128,7 @@ export LDFLAGS="%{ldflags}"
 %meson_install
 
 %files
-%doc README TODO
+%doc README
 %{_bindir}/orcc
 %{_bindir}/orc-bugreport
 
@@ -140,10 +143,6 @@ export LDFLAGS="%{ldflags}"
 %{_libdir}/liborc*-%{api}.so
 %{_libdir}/pkgconfig/orc-%{api}.pc
 %{_libdir}/pkgconfig/orc-test-%{api}.pc
-%{_datadir}/aclocal/orc.m4
-
-%files -n %{devstatic}
-%{_libdir}/liborc*-%{api}.a
 
 %if %{with compat32}
 %files -n %{lib32name}
@@ -156,7 +155,4 @@ export LDFLAGS="%{ldflags}"
 %{_prefix}/lib/liborc*-%{api}.so
 %{_prefix}/lib/pkgconfig/orc-%{api}.pc
 %{_prefix}/lib/pkgconfig/orc-test-%{api}.pc
-
-%files -n %{dev32static}
-%{_prefix}/lib/liborc*-%{api}.a
 %endif
